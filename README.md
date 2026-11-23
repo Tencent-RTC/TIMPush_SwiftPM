@@ -1,24 +1,26 @@
 # TIMPush
 
-腾讯云即时通信 IM 离线推送插件 TIMPush 的 Swift Package Manager 分发仓库。
+English | [简体中文](README.zh-CN.md)
 
-## 要求
+Swift Package Manager distribution of **TIMPush**, the offline push plugin for Tencent Cloud Chat (IM).
+
+## Requirements
 
 - iOS 14.0+
-- 自动依赖 [Chat_SDK_SwiftPM](https://github.com/Tencent-RTC/Chat_SDK_SwiftPM)（IM SDK），无需单独添加
+- The IM SDK ([Chat_SDK_SwiftPM](https://github.com/Tencent-RTC/Chat_SDK_SwiftPM)) is added automatically as a dependency. No need to add it separately.
 
-## 集成
+## Installation
 
 ### Xcode
 
-File > Add Package Dependencies，输入：
+Go to File > Add Package Dependencies and enter:
 
 ```
 https://github.com/Tencent-RTC/TIMPush_SwiftPM.git
 ```
 
-选择版本规则 Up to Next Major Version，将 `TIMPush_SwiftPM` 添加到 App target。
-如果使用 Notification Service Extension，也需要把 `TIMPush_SwiftPM` 添加到该 extension target。
+Choose "Up to Next Major Version" as the dependency rule, then add `TIMPush_SwiftPM` to your app target.
+If you use a Notification Service Extension, also add `TIMPush_SwiftPM` to the extension target.
 
 ### Package.swift
 
@@ -33,9 +35,9 @@ targets: [
 ]
 ```
 
-## 使用
+## Usage
 
-Swift：
+Swift:
 
 ```swift
 import TIMPush
@@ -43,16 +45,16 @@ import TIMPush
 TIMPushManager.getRegistrationID { id in print(id) }
 ```
 
-Objective-C：
+Objective-C:
 
 ```objc
 #import <TIMPush/TIMPush.h>
 ```
 
-## 版本
+## Versioning
 
-版本号与 IM SDK 保持一致，例如 `9.1.7824`。
+Versions match the IM SDK version, for example `9.1.7824`.
 
-## 文档
+## Documentation
 
-[离线推送集成文档](https://cloud.tencent.com/document/product/269/9147)
+[Offline Push Integration Guide](https://trtc.io/document/67555?product=push&menulabel=app%20push&platform=android)
